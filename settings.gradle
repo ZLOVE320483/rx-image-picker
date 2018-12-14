@@ -1,1 +1,1 @@
-include ':app', ':rx-image-picker-core'
+include ':app', ':rx-image-picker-core', ':rx-image-picker-support'
