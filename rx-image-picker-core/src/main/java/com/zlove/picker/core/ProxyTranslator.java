@@ -67,7 +67,7 @@ public class ProxyTranslator {
             case GALLERY:
                 return method.getAnnotation(Gallery.class).componentClazz();
         }
-        return null;
+        return method.getAnnotation(Gallery.class).componentClazz();
     }
 
     private SourcesFrom streamSourcesFrom(Method method) {
