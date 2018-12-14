@@ -12,7 +12,9 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface Camera {
+
     Class<?> componentClazz() default SystemCameraPickerView.class;
+
     boolean openAsFragment() default true;
 
     @IdRes
