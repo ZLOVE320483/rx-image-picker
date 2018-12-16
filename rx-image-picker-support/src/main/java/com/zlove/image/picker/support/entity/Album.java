@@ -12,6 +12,7 @@ import com.zlove.image.picker.support.loader.AlbumLoader;
 public class Album implements Parcelable {
 
     public static final String ALBUM_ID_ALL = "-1";
+    public static final String ALBUM_NAME_ALL = "All";
 
     public final String id;
     public final String coverPath;
