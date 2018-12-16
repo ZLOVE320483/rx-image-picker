@@ -2,7 +2,10 @@ package com.zlove.image.picker.support.entity;
 
 import android.content.Context;
 import android.support.annotation.IntDef;
+import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
+
+import com.zlove.image.picker.support.ui.widget.IncapableDialog;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -51,6 +54,8 @@ public class IncapableCause {
             case NONE:
                 break;
             case DIALOG:
+                IncapableDialog incapableDialog = IncapableDialog.newInstance(cause.mTitle, cause.mMessage);
+                incapableDialog.show(((FragmentActivity) context).getSupportFragmentManager(), IncapableDialog.class.getName());
                 break;
             case TOAST:
                 Toast.makeText(context, cause.mMessage, Toast.LENGTH_SHORT).show();
