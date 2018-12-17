@@ -16,7 +16,7 @@ public class Item implements Parcelable {
 
     private final long id;
     private final String mimeType;
-    private final Uri contentUri;
+    public final Uri contentUri;
     private final long size;
     private final long duration;
 

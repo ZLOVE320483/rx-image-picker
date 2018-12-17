@@ -1,9 +1,17 @@
 package com.zlove.image.picker.support.utils;
 
 import android.content.ContentResolver;
+import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.MediaStore;
+
+import com.zlove.image.picker.support.MimeType;
+import com.zlove.image.picker.support.R;
+import com.zlove.image.picker.support.entity.IncapableCause;
+import com.zlove.image.picker.support.entity.Item;
+import com.zlove.image.picker.support.entity.SelectionSpec;
+import com.zlove.image.picker.support.filter.Filter;
 
 public class PhotoMetadataUtils {
 
@@ -31,6 +39,36 @@ public class PhotoMetadataUtils {
             }
         }
         return uri.getPath();
+    }
+
+    public static IncapableCause isAcceptable(Context context, Item item) {
+        if (!isSelectableType(context, item)) {
+            return new IncapableCause(context.getString(R.string.error_file_type));
+        }
+
+        if (SelectionSpec.instance.filters != null) {
+            for (Filter filter : SelectionSpec.instance.filters) {
+                IncapableCause incapableCause = filter.filter(context, item);
+                if (incapableCause != null) {
+                    return incapableCause;
+                }
+            }
+        }
+        return null;
+    }
+
+    private static boolean isSelectableType(Context context, Item item) {
+        if (context == null) {
+            return false;
+        }
+
+        ContentResolver resolver = context.getContentResolver();
+        for (MimeType type : SelectionSpec.instance.mimeTypeSet) {
+            if (type.checkType(resolver, item.contentUri)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
