@@ -14,7 +14,7 @@ import java.util.Set;
 
 public enum MimeType {
 
-    JEPG("image/jpeg", MimeTypeUtils.setOf("jpg", "jpeg")),
+    JPEG("image/jpeg", MimeTypeUtils.setOf("jpg", "jpeg")),
     PNG("image/png", MimeTypeUtils.setOf("png")),
     GIF("image/gif", MimeTypeUtils.setOf("gif")),
     BMP("image/x-ms-bmp", MimeTypeUtils.setOf("bmp")),
