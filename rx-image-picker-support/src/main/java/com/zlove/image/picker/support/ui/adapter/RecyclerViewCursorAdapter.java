@@ -6,7 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 
 public abstract class RecyclerViewCursorAdapter<VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
-    private Cursor cursor;
+    protected Cursor cursor;
     private int mRowIDColumn;
 
     public RecyclerViewCursorAdapter(Cursor cursor) {

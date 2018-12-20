@@ -128,12 +128,12 @@ public class MediaGrid extends SquareFrameLayout implements View.OnClickListener
         mListener = listener;
     }
 
-    interface OnMediaGridClickListener {
+    public interface OnMediaGridClickListener {
         void onThumbnailClicked(ImageView thumbnail, Item item, RecyclerView.ViewHolder holder);
         void onCheckViewClicked(CheckView checkView, Item item, RecyclerView.ViewHolder holder);
     }
 
-    static class PreBindInfo {
+    public static class PreBindInfo {
 
         public int mResize;
         public Drawable mPlaceholder;

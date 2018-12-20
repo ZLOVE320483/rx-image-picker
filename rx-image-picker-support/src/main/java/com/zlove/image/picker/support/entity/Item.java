@@ -1,6 +1,7 @@
 package com.zlove.image.picker.support.entity;
 
 import android.content.ContentUris;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -131,5 +132,12 @@ public class Item implements Parcelable {
         result = 31 * result + java.lang.Long.valueOf(size).hashCode();
         result = 31 * result + java.lang.Long.valueOf(duration).hashCode();
         return result;
+    }
+
+    public static Item valueOf(Cursor cursor) {
+        return new Item(cursor.getLong(cursor.getColumnIndex(MediaStore.Files.FileColumns._ID)),
+                cursor.getString(cursor.getColumnIndex(MediaStore.MediaColumns.MIME_TYPE)),
+                cursor.getLong(cursor.getColumnIndex(MediaStore.MediaColumns.SIZE)),
+                cursor.getLong(cursor.getColumnIndex("duration")));
     }
 }
