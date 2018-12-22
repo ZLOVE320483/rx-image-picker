@@ -13,6 +13,8 @@ import com.zlove.image.picker.support.entity.Item;
 import com.zlove.image.picker.support.entity.SelectionSpec;
 import com.zlove.image.picker.support.filter.Filter;
 
+import java.text.DecimalFormat;
+
 public class PhotoMetadataUtils {
 
     private static final String TAG = PhotoMetadataUtils.class.getSimpleName();
@@ -69,6 +71,10 @@ public class PhotoMetadataUtils {
             }
         }
         return false;
+    }
+
+    public static float getSizeInMB(Long sizeInBytes) {
+        return Float.valueOf(new DecimalFormat("0.0").format((sizeInBytes / 1024f / 1024f)));
     }
 
 }

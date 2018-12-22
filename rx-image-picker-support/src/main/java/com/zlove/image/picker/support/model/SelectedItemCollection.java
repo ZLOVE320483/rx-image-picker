@@ -46,7 +46,7 @@ public class SelectedItemCollection {
     private Bundle dataWithBundle;
     private boolean isEmpty;
 
-    private SelectedItemCollection(Context context) {
+    public SelectedItemCollection(Context context) {
         this.mContext = context;
     }
 

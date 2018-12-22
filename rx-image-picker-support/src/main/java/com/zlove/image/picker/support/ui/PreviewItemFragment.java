@@ -17,4 +17,7 @@ public class PreviewItemFragment extends Fragment {
         return fragment;
     }
 
+    public void resetView() {
+
+    }
 }
