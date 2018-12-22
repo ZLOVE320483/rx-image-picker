@@ -1,1 +1,1 @@
-include ':app', ':rx-image-picker-core', ':rx-image-picker-support'
+include ':app', ':rx-image-picker-core', ':rx-image-picker-support', ':rx-image-picker-style-wechat'
