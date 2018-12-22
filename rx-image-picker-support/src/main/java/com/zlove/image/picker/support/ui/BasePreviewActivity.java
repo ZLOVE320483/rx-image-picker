@@ -29,16 +29,16 @@ public class BasePreviewActivity extends AppCompatActivity implements ViewPager.
     public static final String EXTRA_RESULT_BUNDLE = "extra_result_bundle";
     public static final String EXTRA_RESULT_APPLY = "extra_result_apply";
 
-    private SelectedItemCollection mSelectedCollection = new SelectedItemCollection(this);
-    private SelectionSpec mSpec;
-    private ViewPager mPager;
-    private PreviewPagerAdapter mAdapter;
-    private CheckView mCheckView;
-    private TextView mButtonBack;
-    private TextView mButtonApply;
-    private TextView mSize;
+    protected SelectedItemCollection mSelectedCollection = new SelectedItemCollection(this);
+    protected SelectionSpec mSpec;
+    protected ViewPager mPager;
+    protected PreviewPagerAdapter mAdapter;
+    protected CheckView mCheckView;
+    protected TextView mButtonBack;
+    protected TextView mButtonApply;
+    protected TextView mSize;
 
-    private int mPreviousPos = -1;
+    protected int mPreviousPos = -1;
 
     @LayoutRes
     protected int layoutRes() {

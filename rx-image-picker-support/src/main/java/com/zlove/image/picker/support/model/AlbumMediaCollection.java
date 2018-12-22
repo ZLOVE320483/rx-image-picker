@@ -72,7 +72,7 @@ public class AlbumMediaCollection implements LoaderManager.LoaderCallbacks<Curso
         mLoaderManager.initLoader(LOADER_ID, args, this);
     }
 
-    interface AlbumMediaCallbacks {
+    public interface AlbumMediaCallbacks {
         void onAlbumMediaLoad(Cursor cursor);
         void onAlbumMediaReset();
     }
