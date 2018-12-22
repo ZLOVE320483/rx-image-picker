@@ -1,2 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zlove.image.picker.support" />
+    package="com.zlove.image.picker.support">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application>
+        <activity android:name=".ui.AlbumPreviewActivity" />
+        <activity android:name=".ui.SelectedPreviewActivity" />
+    </application>
+</manifest>
