@@ -61,7 +61,7 @@ public abstract class RecyclerViewCursorAdapter<VH extends RecyclerView.ViewHold
         return cursor.getLong(mRowIDColumn);
     }
 
-    private void swapCursor(Cursor newCursor) {
+    public void swapCursor(Cursor newCursor) {
         if (newCursor == cursor) {
             return;
         }

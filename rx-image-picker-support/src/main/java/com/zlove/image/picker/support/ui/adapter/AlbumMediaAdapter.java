@@ -246,15 +246,15 @@ public class AlbumMediaAdapter extends RecyclerViewCursorAdapter<RecyclerView.Vi
         return mImageResize;
     }
 
-    interface CheckStateListener {
+    public interface CheckStateListener {
         void onUpdate();
     }
 
-    interface OnMediaClickListener {
+    public interface OnMediaClickListener {
         void onMediaClick(Album album, Item item, int adapterPosition);
     }
 
-    interface OnPhotoCapture {
+    public interface OnPhotoCapture {
         void capture();
     }
 
