@@ -1,10 +1,10 @@
 package bytedance.com.image.picker.style.wechat.ui;
 
-import com.zlove.image.picker.support.ui.AlbumPreviewActivity;
+import com.zlove.image.picker.support.ui.SelectedPreviewActivity;
 
 import bytedance.com.image.picker.style.wechat.R;
 
-public class WechatAlbumPreviewActivity extends AlbumPreviewActivity {
+public class WechatSelectedPreviewActivity extends SelectedPreviewActivity {
 
     @Override
     protected int layoutRes() {
