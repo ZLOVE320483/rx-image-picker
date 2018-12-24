@@ -38,7 +38,9 @@ public class AlbumMediaAdapter extends RecyclerViewCursorAdapter<RecyclerView.Vi
     private OnMediaClickListener mOnMediaClickListener;
     private int mImageResize;
 
-    public int itemLayoutRes = R.layout.media_grid_item;
+    public int getItemLayoutRes() {
+        return R.layout.media_grid_item;
+    }
 
     public AlbumMediaAdapter(Context context, SelectedItemCollection selectedItemCollection, RecyclerView recyclerView) {
         super(null);
@@ -65,10 +67,10 @@ public class AlbumMediaAdapter extends RecyclerViewCursorAdapter<RecyclerView.Vi
             });
             return holder;
         } else if (viewType == VIEW_TYPE_MEDIA) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(itemLayoutRes, parent, false);
+            View view = LayoutInflater.from(parent.getContext()).inflate(getItemLayoutRes(), parent, false);
             return new MediaViewHolder(view);
         } else {
-            View view = LayoutInflater.from(parent.getContext()).inflate(itemLayoutRes, parent, false);
+            View view = LayoutInflater.from(parent.getContext()).inflate(getItemLayoutRes(), parent, false);
             return new MediaViewHolder(view);
         }
     }
