@@ -40,7 +40,7 @@ public class AlbumsAdapter extends CursorAdapter {
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
-        ContextThemeWrapper contextThemeWrapper = new ContextThemeWrapper(context, SelectionSpec.instance.themeId);
+        ContextThemeWrapper contextThemeWrapper = new ContextThemeWrapper(context, SelectionSpec.getInstance().themeId);
         return LayoutInflater.from(context)
                 .cloneInContext(contextThemeWrapper)
                 .inflate(R.layout.album_list_item, parent, false);
@@ -52,7 +52,7 @@ public class AlbumsAdapter extends CursorAdapter {
         ((TextView) view.findViewById(R.id.album_name)).setText(album.getDisplayName(context));
         ((TextView) view.findViewById(R.id.album_media_count)).setText(String.valueOf(album.count));
 
-        SelectionSpec.instance.imageEngine.loadThumbnail(context,
+        SelectionSpec.getInstance().imageEngine.loadThumbnail(context,
                 context.getResources().getDimensionPixelSize(R.dimen.media_grid_size),
                 mPlaceholder,
                 view.findViewById(R.id.album_cover),

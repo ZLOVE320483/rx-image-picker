@@ -21,7 +21,7 @@ public class AlbumCollection implements LoaderManager.LoaderCallbacks<Cursor> {
     private WeakReference<Context> mContext;
     private LoaderManager mLoaderManager;
     private AlbumCallbacks mCallbacks;
-    private int currentSelection;
+    public int currentSelection;
 
     public void onCreate(FragmentActivity activity, AlbumCallbacks callbacks) {
         mContext = new WeakReference<>(activity);
@@ -69,7 +69,7 @@ public class AlbumCollection implements LoaderManager.LoaderCallbacks<Cursor> {
         mCallbacks.onAlbumReset();
     }
 
-    interface AlbumCallbacks {
+    public interface AlbumCallbacks {
         void onAlbumLoad(Cursor cursor);
         void onAlbumReset();
     }

@@ -43,7 +43,7 @@ public class SelectedItemCollection {
     private Set<Item> mItems;
     private int collectionType = COLLECTION_UNDEFINED;
 
-    private Bundle dataWithBundle;
+    public Bundle dataWithBundle;
     private boolean isEmpty;
 
     public SelectedItemCollection(Context context) {
@@ -171,7 +171,7 @@ public class SelectedItemCollection {
 
     // depends
     private int currentMaxSelectable()  {
-        SelectionSpec spec = SelectionSpec.instance;
+        SelectionSpec spec = SelectionSpec.getInstance();
         if (spec.maxSelectable > 0) {
             return spec.maxSelectable;
         } else if (collectionType == COLLECTION_IMAGE) {
@@ -204,7 +204,7 @@ public class SelectedItemCollection {
      * while [SelectionSpec.mediaTypeExclusive] is set to false.
      */
     public boolean typeConflict(Item item) {
-        return SelectionSpec.instance.mediaTypeExclusive
+        return SelectionSpec.getInstance().mediaTypeExclusive
                 && (item.isImage() && (collectionType == COLLECTION_VIDEO
                 || collectionType == COLLECTION_MIXED)
                 || item.isVideo()

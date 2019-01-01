@@ -59,7 +59,7 @@ public class WechatImageListGridFragment extends Fragment implements AlbumMediaA
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        ContextThemeWrapper contextThemeWrapper = new ContextThemeWrapper(getActivity(), SelectionSpec.instance.themeId);
+        ContextThemeWrapper contextThemeWrapper = new ContextThemeWrapper(getActivity(), SelectionSpec.getInstance().themeId);
         LayoutInflater localInflater = inflater
                 .cloneInContext(contextThemeWrapper);
         return localInflater.inflate(R.layout.fragment_media_selection, container, false);
@@ -84,7 +84,7 @@ public class WechatImageListGridFragment extends Fragment implements AlbumMediaA
         mRecyclerView.setHasFixedSize(true);
 
         int spanCount;
-        SelectionSpec selectionSpec = SelectionSpec.instance;
+        SelectionSpec selectionSpec = SelectionSpec.getInstance();
         if (selectionSpec.gridExpectedSize > 0) {
             spanCount = UIUtils.spanCount(getContext(), selectionSpec.gridExpectedSize);
         } else {
