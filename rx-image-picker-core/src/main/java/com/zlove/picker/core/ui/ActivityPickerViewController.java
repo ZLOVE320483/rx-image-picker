@@ -60,11 +60,11 @@ public class ActivityPickerViewController implements ICustomPickerView {
         }
     }
 
-    private void emitError(Throwable e) {
+    public void emitError(Throwable e) {
         publishSubject.onError(e);
     }
 
-    private void endResultEmitAndReset() {
+    public void endResultEmitAndReset() {
         publishSubject.onComplete();
         resetSubject();
     }
