@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/rx-image-picker-core" />
             <option value="$PROJECT_DIR$/rx-image-picker-style-wechat" />
+            <option value="$PROJECT_DIR$/rx-image-picker-style-zhihu" />
             <option value="$PROJECT_DIR$/rx-image-picker-support" />
           </set>
         </option>
