@@ -1,2 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="bytedance.com.image.picker.style.wechat" />
+    package="bytedance.com.image.picker.style.wechat">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application>
+        <activity android:name=".ui.WechatImagePickerActivity"/>
+        <activity android:name=".ui.WechatAlbumPreviewActivity"/>
+        <activity android:name=".ui.WechatSelectedPreviewActivity"/>
+    </application>
+</manifest>
