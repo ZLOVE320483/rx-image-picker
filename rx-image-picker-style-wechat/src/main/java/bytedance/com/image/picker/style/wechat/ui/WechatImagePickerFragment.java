@@ -214,7 +214,7 @@ public class WechatImagePickerFragment extends Fragment implements IGalleryCusto
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        mAlbumCollection.onDestory();
+        mAlbumCollection.onDestroy();
     }
 
     @Override

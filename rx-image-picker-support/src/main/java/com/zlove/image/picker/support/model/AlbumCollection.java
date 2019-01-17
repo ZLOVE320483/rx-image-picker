@@ -40,7 +40,7 @@ public class AlbumCollection implements LoaderManager.LoaderCallbacks<Cursor> {
         outState.putInt(STATE_CURRENT_SELECTION, currentSelection);
     }
 
-    public void onDestory() {
+    public void onDestroy() {
         mLoaderManager.destroyLoader(LOADER_ID);
         mCallbacks = null;
     }
