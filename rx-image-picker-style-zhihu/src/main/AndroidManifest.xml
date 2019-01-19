@@ -1,2 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zlove.image.picker.style.zhihu" />
+    package="com.zlove.image.picker.style.zhihu">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application>
+        <activity android:name=".ui.ZhihuImagePickerActivity" />
+    </application>
+</manifest>
