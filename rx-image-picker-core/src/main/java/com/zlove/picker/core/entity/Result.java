@@ -8,8 +8,8 @@ import java.io.Serializable;
 
 public class Result {
 
-    private final Uri uri;
-    private final Bundle extraData;
+    public final Uri uri;
+    public final Bundle extraData;
 
     private Result(Builder builder) {
         this.uri = builder.uri;
